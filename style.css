@@ -1,0 +1,187 @@
+:root {
+    --text-color: #828282;
+    --border-color:#e0e0e0;
+    --primary-color:#2f80ed;
+
+}
+
+*{
+    box-sizing: border-box;
+    font: inherit;
+    color: inherit;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: #222;
+    background-color: rgba(241, 239, 239, 0.76);
+    height: 100vh;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+    
+
+#container{
+    margin:  auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.panel-container {
+    width: 25%;
+}
+.panel {
+    padding: 24px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgb(175,186,200);
+    
+}
+.panel_heading {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+
+}
+.panel_subheading {
+    margin: 0;
+    font-size: 12px;
+    color:var(--text-color);
+    margin-top: 8px;
+    margin-bottom: 24px;
+
+}
+.input {
+    margin-bottom: 20px;
+    position: relative;
+
+}
+
+.input small {
+   visibility: hidden;
+   position: absolute;
+   bottom: -15px;;
+   left: 0;
+   font-size: 12px;
+   color: black;
+}
+.input i {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    visibility: hidden;
+
+}
+
+/*js control*/
+.input.Error small {
+    visibility: visible;
+    color: red;;
+}
+
+.input.success i.fa-check-circle{
+    visibility: visible;
+    color: #0cb351;
+}
+.input.Error i.fa-exclamation-circle{
+    visibility: visible;
+    color:red;
+}
+.input.success input{
+    border-color: #0cb351;
+
+}
+.input.Error input {
+    border-color: red;
+}
+.input.hidden i.fa-exclamation-circle {
+    visibility: hidden;  
+}
+/*------------------------*/
+.input label {
+    font-size: 12px;
+    color: var(--text-color);
+    display: block;
+}
+.input input {
+    border: none;
+    border-bottom: 1px solid  var(--border-color);
+    width: 100%;
+    outline: none;
+    position: relative;
+}
+.input_line {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    transition: all 300ms ease-in-out;
+    
+}
+.input :focus ~ .input_line{
+    width: 100%;
+    background-color: var(--primary-color);
+}
+.consents {
+    color: var(--text-color);
+    font-size: 12px;
+}
+button {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    padding: 10px 24px;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    width: 80%;
+    outline: none;
+    cursor: pointer;
+}
+/*tablet*/
+@media screen and (min-width:480px) and (max-width:1024px) {
+  
+    .panel-container {
+        width: 40%;
+    }
+}
+/*mobile*/
+@media screen and (min-width:320px )and (max-width:480px){
+.panel-container{
+    padding:0;
+    margin: 0;
+    width: 100%;
+   
+}
+.panel {
+height: 100vh;
+border-radius: 0;
+
+}
+.panel_subheading {
+    margin-top: 20px;
+}
+.input .input {
+    margin-bottom: 20px;
+}
+button {
+    margin-top: 20px;
+}
+}
+
+
+.center {
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    margin: 0;
+    
+}
